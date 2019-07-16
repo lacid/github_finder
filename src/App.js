@@ -5,7 +5,6 @@ import Users from './components/users/Users';
 import User from './components/users/User';
 import Search from './components/users/Search';
 import About from './components/pages/About';
-// import Alert from './components/layout/Alert';
 import axios from 'axios';
 import './App.css';
 
@@ -15,7 +14,6 @@ class App extends Component {
     user: {},
     repos: [],
     loading: false
-    // alert: null
   };
 
   // Search Github users
@@ -60,12 +58,6 @@ class App extends Component {
   // Clear users from state
   clearUsers = () => this.setState({ users: [], loading: false });
 
-  // Set Alert
-  // setAlert = (msg, type) => {
-  //   this.setState({ alert: { msg, type } });
-  //   setTimeout(() => this.setState({ alert: null }), 4000);
-  // };
-
   render() {
     const { loading, user, users, repos } = this.state;
 
@@ -74,7 +66,6 @@ class App extends Component {
         <div className='App'>
           <Navbar />
           <div className='container'>
-            {/* <Alert alert={this.state.alert} /> */}
             <Switch>
               <Route
                 exact
@@ -85,7 +76,6 @@ class App extends Component {
                       searchUsers={this.searchUsers}
                       clearUsers={this.clearUsers}
                       showClear={users.length ? true : false}
-                      // setAlert={this.setAlert}
                     />
                     <Users loading={loading} users={users} />
                   </Fragment>
