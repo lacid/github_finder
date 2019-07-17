@@ -1,7 +1,8 @@
-- Search GitHub Users is a react app later refactored to Hooks and Context.
+- production version deployed on Netlify [GitHub Finder](https://githubfinder843.netlify.com/)
+- Search GitHub Users is a react app later refactored using Hooks and Context.
 - There are specific commits for that.
 
-###################################
+## Manual Installation
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
