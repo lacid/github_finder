@@ -1,12 +1,10 @@
-// decides what will happen to state based on actions(coming from GithubState)
-
 import { SEARCH_USERS, SET_LOADING, CLEAR_USERS, GET_USER, GET_REPOS } from '../types';
 
 export default (state, action) => {
   switch (action.type) {
     case SEARCH_USERS:
       return {
-        ...state, // we make a copy of a state with spread operator
+        ...state,
         users: action.payload,
         loading: false
       };

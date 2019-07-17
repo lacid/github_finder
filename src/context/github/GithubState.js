@@ -1,7 +1,3 @@
-// all the actions; like action to fetch data, search, request
-// initial state + ^^ instead of app.js
-// useContext connects actions to use them with different components
-
 import React, { useReducer } from 'react';
 import axios from 'axios';
 import GithubContext from './githubContext';
@@ -18,7 +14,7 @@ const GithubState = props => {
 
   const [state, dispatch] = useReducer(githubReducer, initialState);
 
-  // Search Users
+  // search users
   const searchUsers = async text => {
     setLoading();
 
@@ -34,7 +30,7 @@ const GithubState = props => {
     });
   };
 
-  // Get User
+  // get user
   const getUser = async username => {
     setLoading();
 
@@ -50,7 +46,7 @@ const GithubState = props => {
     });
   };
 
-  // Get users repos
+  // get users repos
   const getUserRepos = async username => {
     setLoading();
 
@@ -66,13 +62,12 @@ const GithubState = props => {
     });
   };
 
-  // Clear Users
+  // clear users
   const clearUsers = () => dispatch({ type: CLEAR_USERS });
 
-  // Set Loading - dispatches an object that has a type to a reducer;
+  // set loading
   const setLoading = () => dispatch({ type: SET_LOADING });
 
-  // has to be wrapped in provider, that takes in props like value which is anything that has to be available to the entire app
   return (
     <GithubContext.Provider
       value={{

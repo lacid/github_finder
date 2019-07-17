@@ -9,11 +9,6 @@ import GithubState from './context/github/GithubState';
 import './App.css';
 
 const App = () => {
-  // Search Github users
-  // Get single GitHub user
-  // Get users repos
-  // Clear users from state
-
   return (
     <GithubState>
       <Router>
